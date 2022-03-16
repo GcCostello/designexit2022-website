@@ -1,20 +1,29 @@
 #studentGrid {
-    > .card:nth-child(even) {
+    > .card:nth-child(odd) {
         @apply mt-l
     }
 } 
     
 @screen sm {
-    #studentGrid > .card:nth-child(even) {
+    #studentGrid > .card:nth-child(odd) {
         @apply mt-0
     }
 }
 
 @screen sm {
-    #studentGrid > .card:nth-child(3n+2) {
-        @apply mt-l
+    #studentGrid > .card:nth-child(2n + 1):nth-child(-n + 4) {
+      @apply mt-xl;
     }
-}
+    #studentGrid > .card:nth-child(2n + 4):nth-child(-n + 6) {
+      @apply mt-xl;
+    }
+    #studentGrid > .card:nth-child(2n + 7):nth-child(-n + 9) {
+      @apply mt-xl;
+    }
+    #studentGrid > .card:nth-child(2n + 10) {
+      @apply mt-xl;
+    }
+  }
 
 @screen md {
     #studentGrid > .card:nth-child(3n+2) {
